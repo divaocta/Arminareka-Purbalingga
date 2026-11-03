@@ -1,0 +1,133 @@
+
+.admin-login-page {
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: #f7f5ef;
+}
+
+.admin-login-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 36px;
+  background: #ffffff;
+  border: 1px solid #e8e3d8;
+  border-radius: 16px;
+  box-shadow: 0 8px 28px rgba(18, 60, 105, 0.08);
+}
+
+.admin-login-logo {
+  display: block;
+  width: 150px;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 24px;
+  object-fit: contain;
+}
+
+.admin-login-label {
+  margin: 0 0 8px;
+  color: #c99a2e;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.admin-login-card h1 {
+  margin: 0;
+  color: #123c69;
+  font-size: 28px;
+  text-align: center;
+}
+
+.admin-login-description {
+  margin: 12px 0 28px;
+  color: #687386;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.admin-login-error {
+  margin: 0 0 18px;
+  padding: 12px 14px;
+  border: 1px solid #f1c0c0;
+  border-radius: 8px;
+  background: #fff3f3;
+  color: #a73535;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.admin-login-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.admin-login-field label {
+  color: #123c69;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.admin-login-field input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border: 1px solid #d8dee8;
+  border-radius: 8px;
+  outline: none;
+  font: inherit;
+  font-size: 14px;
+}
+
+.admin-login-field input:focus {
+  border-color: #123c69;
+  box-shadow: 0 0 0 3px rgba(18, 60, 105, 0.1);
+}
+
+.admin-login-button {
+  width: 100%;
+  padding: 13px;
+  margin-top: 4px;
+  border: none;
+  border-radius: 8px;
+  background: #123c69;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.admin-login-button:hover {
+  background: #0c2d50;
+}
+
+.admin-login-back {
+  display: block;
+  margin-top: 22px;
+  color: #123c69;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.admin-login-back:hover {
+  color: #c99a2e;
+}
+
+@media (max-width: 480px) {
+  .admin-login-card {
+    padding: 26px 20px;
+  }
+
+  .admin-login-card h1 {
+    font-size: 24px;
+  }
+}

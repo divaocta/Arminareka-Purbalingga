@@ -1,0 +1,210 @@
+
+.registration-page {
+  min-height: 100vh;
+  padding: 60px 20px 80px;
+  background: #f5f7fa;
+}
+
+.registration {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.registration-header {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.registration-label {
+  color: #c99a2e;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.registration-header h1 {
+  margin: 12px 0;
+  color: #123c69;
+  font-size: 36px;
+}
+
+.registration-header > p:last-child {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #64748b;
+  line-height: 1.7;
+}
+
+.registration-form {
+  padding: 36px;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 8px 30px rgba(18, 60, 105, 0.08);
+}
+
+.registration-section-title {
+  margin: 30px 0 20px;
+}
+
+.registration-section-title:first-child {
+  margin-top: 0;
+}
+
+.registration-section-title h2 {
+  margin: 0 0 8px;
+  color: #123c69;
+  font-size: 21px;
+}
+
+.registration-section-title p {
+  margin: 0;
+  color: #718096;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.registration-grid,
+.registration-documents {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.registration-field {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.registration-field label {
+  color: #26384b;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.registration-field input,
+.registration-field select,
+.registration-field textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  padding: 12px 14px;
+  border: 1px solid #d7e0ea;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #26384b;
+  font: inherit;
+  font-size: 14px;
+}
+
+.registration-field input:focus,
+.registration-field select:focus,
+.registration-field textarea:focus {
+  outline: 2px solid rgba(18, 60, 105, 0.15);
+  border-color: #123c69;
+}
+
+.registration-field textarea {
+  resize: vertical;
+}
+
+.registration-field input[type='file'] {
+  padding: 10px;
+  border: 1px dashed #b9c7d8;
+  background: #f8fafc;
+  font-size: 12px;
+}
+
+.registration-field small {
+  overflow-wrap: anywhere;
+  color: #287345;
+  font-size: 12px;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+.registration-document-note {
+  margin: 18px 0;
+  color: #718096;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.registration-disclaimer {
+  margin: 26px 0;
+  padding: 14px 16px;
+  border-left: 3px solid #c99a2e;
+  border-radius: 4px;
+  background: #fff9e9;
+}
+
+.registration-disclaimer p {
+  margin: 0;
+  color: #68552c;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.registration-submit,
+.registration-success button {
+  width: 100%;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #123c69;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.registration-submit:hover,
+.registration-success button:hover {
+  background: #0b2c50;
+}
+
+.registration-success {
+  margin-bottom: 24px;
+  padding: 22px;
+  border: 1px solid #b8e0c4;
+  border-radius: 12px;
+  background: #f0fff4;
+}
+
+.registration-success h2 {
+  margin-top: 0;
+  color: #216e39;
+}
+
+.registration-success p {
+  color: #315d3e;
+  line-height: 1.7;
+}
+
+@media (max-width: 640px) {
+  .registration-page {
+    padding: 36px 14px 50px;
+  }
+
+  .registration-header h1 {
+    font-size: 28px;
+  }
+
+  .registration-form {
+    padding: 22px 16px;
+  }
+
+  .registration-grid,
+  .registration-documents {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .full-width {
+    grid-column: auto;
+  }
+}

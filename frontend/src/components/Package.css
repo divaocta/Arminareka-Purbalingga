@@ -1,0 +1,259 @@
+
+.package {
+  position: relative;
+  padding: 60px 24px;
+  background-color: #f8fafc;
+  text-align: center;
+  overflow: hidden;
+}
+
+.package::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/kaabah-transparent.png');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 85% auto;
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+.package-header {
+  position: relative;
+  z-index: 1;
+  max-width: 650px;
+  margin: 0 auto 35px;
+}
+
+.package-header > p {
+  margin: 0 0 10px;
+  color: #c99a2e;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.package-header h2 {
+  margin: 0 0 14px;
+  color: #123c69;
+  font-size: 30px;
+  line-height: 1.3;
+}
+
+.package-header > span {
+  color: #666;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* KOTAK PAKET */
+.package-cards {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 18px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.package-card {
+  min-width: 0;
+  padding: 23px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background-color: #fff;
+  border: 1px solid #e7eaf0;
+  border-radius: 10px;
+  text-align: left;
+  transition: border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.package-card:hover {
+  border-color: #c99a2e;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+}
+
+.package-card-featured {
+  border: 1px solid #c99a2e;
+}
+
+.package-card-top {
+  margin-bottom: 15px;
+}
+
+.package-card-top span {
+  display: inline-block;
+  padding: 7px 10px;
+  background-color: #f8f1df;
+  border-radius: 5px;
+  color: #a77a17;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
+
+.package-card h3 {
+  margin: 0 0 9px;
+  color: #123c69;
+  font-size: 23px;
+  line-height: 1.3;
+}
+
+.package-duration {
+  margin: 0 0 5px;
+  color: #555;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.package-distance {
+  margin: 0 0 15px;
+  color: #777;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.package-price {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 0 0 14px;
+  padding: 14px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.package-price span {
+  color: #777;
+  font-size: 11px;
+}
+
+.package-price strong {
+  color: #123c69;
+  font-size: 19px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.package-description {
+  margin: 0 0 13px;
+  color: #666;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.package-card ul {
+  flex: 1;
+  padding: 0;
+  margin: 0 0 20px;
+  list-style: none;
+}
+
+.package-card li {
+  position: relative;
+  padding: 8px 0 8px 19px;
+  border-bottom: 1px solid #f0f0f0;
+  color: #555;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.package-card li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  color: #c99a2e;
+  font-weight: 700;
+}
+
+.package-card button {
+  width: 100%;
+  padding: 11px 15px;
+  background-color: #123c69;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.package-card button:hover {
+  background-color: #0d2d50;
+}
+
+.package-note {
+  position: relative;
+  z-index: 1;
+  max-width: 750px;
+  margin: 24px auto 0;
+  color: #777;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+/* TABLET */
+@media (max-width: 850px) {
+  .package {
+    padding: 55px 22px;
+  }
+
+  .package-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 680px;
+  }
+
+  .package-card:last-child {
+    grid-column: 1 / -1;
+    width: calc(50% - 9px);
+    justify-self: center;
+  }
+}
+
+/* HP */
+@media (max-width: 600px) {
+  .package {
+    padding: 45px 18px;
+  }
+
+  .package-header {
+    margin-bottom: 28px;
+  }
+
+  .package-header h2 {
+    font-size: 26px;
+  }
+
+  .package-header > span {
+    font-size: 12px;
+  }
+
+  .package-cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .package-card,
+  .package-card:last-child {
+    width: 100%;
+    grid-column: auto;
+    padding: 22px;
+  }
+
+  .package-card h3 {
+    font-size: 22px;
+  }
+
+  .package-price strong {
+    font-size: 20px;
+  }
+}

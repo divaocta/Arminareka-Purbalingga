@@ -1,0 +1,271 @@
+
+.site-footer {
+  --footer-bg: #f7f5ef;
+  --footer-navy: #123c69;
+  --footer-gold: #c99a2e;
+  --footer-text: #586579;
+  --footer-muted: #7c8795;
+
+  background: var(--footer-bg);
+  color: var(--footer-navy);
+  padding: 32px 24px 0;
+  border-top: 2px solid #e7dfce;
+}
+
+/* Layout utama */
+.footer-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.25fr 1fr 0.75fr;
+  gap: 42px;
+  padding-bottom: 26px;
+}
+
+/* Logo dan identitas */
+.footer-brand {
+  max-width: 330px;
+}
+
+.footer-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--footer-navy);
+  text-decoration: none;
+}
+
+.footer-logo img {
+  display: block;
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+}
+
+.footer-logo span {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.footer-logo strong {
+  font-size: 14px;
+  font-weight: 750;
+  letter-spacing: 1px;
+}
+
+.footer-logo small {
+  color: var(--footer-gold);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.footer-description {
+  margin: 14px 0 0;
+  color: var(--footer-text);
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+/* Judul kolom */
+.footer-column h3 {
+  margin: 3px 0 15px;
+  color: var(--footer-navy);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Isi kolom */
+.footer-column p {
+  margin: 0 0 9px;
+  color: var(--footer-text);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.footer-column .footer-highlight {
+  margin-bottom: 6px;
+  color: var(--footer-navy);
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.footer-column .footer-muted {
+  margin-top: 10px;
+  color: var(--footer-muted);
+}
+
+/* Link kontak */
+.footer-contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 3px;
+  color: var(--footer-navy);
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-contact-link span {
+  color: var(--footer-gold);
+  transition: transform 0.2s ease;
+}
+
+.footer-contact-link:hover {
+  color: var(--footer-gold);
+}
+
+.footer-contact-link:hover span {
+  transform: translate(2px, -2px);
+}
+
+/* Navigasi */
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.footer-links a {
+  color: var(--footer-text);
+  font-size: 12px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--footer-gold);
+}
+
+/* Bagian bawah footer */
+.footer-bottom {
+  width: 100%;
+  max-width: 1100px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 12px 0;
+
+  border-top: 1px solid #e3ddcf;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: var(--footer-muted);
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.footer-closing {
+  text-align: center;
+}
+
+/* Tombol Login Admin */
+.footer-admin-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  flex-shrink: 0;
+
+  padding: 5px 8px;
+  border: 1px solid var(--footer-gold);
+  border-radius: 4px;
+  background: var(--footer-gold);
+
+  color: var(--footer-navy);
+  font-size: 9px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+
+  transition: all 0.2s ease;
+}
+
+.footer-admin-link span {
+  color: var(--footer-navy);
+  font-size: 10px;
+}
+
+.footer-admin-link:hover {
+  background: var(--footer-navy);
+  border-color: var(--footer-navy);
+  color: #ffffff;
+}
+
+.footer-admin-link:hover span {
+  color: #ffffff;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+    max-width: 460px;
+  }
+
+  .footer-bottom {
+    flex-wrap: wrap;
+  }
+}
+
+/* HP */
+@media (max-width: 600px) {
+  .site-footer {
+    padding: 28px 18px 0;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding-bottom: 22px;
+  }
+
+  .footer-brand {
+    grid-column: auto;
+  }
+
+  .footer-logo img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .footer-column h3 {
+    margin-bottom: 12px;
+  }
+
+  .footer-links {
+    gap: 9px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 9px;
+    padding: 12px 0;
+  }
+
+  .footer-closing {
+    text-align: left;
+  }
+
+  .footer-admin-link {
+    margin-top: 2px;
+  }
+}

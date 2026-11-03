@@ -1,0 +1,280 @@
+.package-detail {
+  background-color: white;
+}
+
+
+/* HERO */
+
+.package-detail-hero {
+  padding: 100px 80px;
+
+  background-image:
+    linear-gradient(
+      rgba(10, 45, 80, 0.70),
+      rgba(10, 45, 80, 0.70)
+    ),
+    url('/hero-umroh.jpg');
+
+  background-size: cover;
+
+  background-position: center bottom;
+
+  color: white;
+
+  text-align: center;
+}
+
+.package-detail-hero p {
+  margin: 0 0 12px;
+
+  color: #d6a83d;
+
+  font-size: 14px;
+
+  font-weight: bold;
+
+  letter-spacing: 1.5px;
+}
+
+.package-detail-hero h1 {
+  margin: 0 0 20px;
+
+  font-size: 42px;
+}
+
+.package-detail-hero span {
+  display: block;
+
+  max-width: 700px;
+
+  margin: 0 auto;
+
+  color: #dce6ef;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+
+/* INFORMASI */
+
+.package-detail-info {
+  padding: 80px;
+
+  background-color: #f8fafc;
+
+  background-image: url('/hero-umroh-3T.png');
+
+  background-repeat: no-repeat;
+
+  background-position: center;
+
+  background-size: cover;
+}
+
+.package-detail-header {
+  max-width: 750px;
+
+  margin: 0 auto 50px;
+
+  text-align: center;
+}
+
+.package-detail-header p {
+  margin: 0 0 12px;
+
+  color: #c99a2e;
+
+  font-size: 14px;
+
+  font-weight: bold;
+
+  letter-spacing: 1.5px;
+}
+
+.package-detail-header h2 {
+  margin: 0 0 20px;
+
+  color: #123c69;
+
+  font-size: 34px;
+}
+
+.package-detail-header span {
+  color: #666666;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+
+/* CARD FASILITAS & PERSYARATAN */
+
+.package-detail-content {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 25px;
+
+  max-width: 1000px;
+
+  margin: 0 auto;
+}
+
+.package-detail-card {
+  padding: 30px;
+
+  background-color: white;
+
+  border: 1px solid #eeeeee;
+
+  border-radius: 14px;
+}
+
+.package-detail-card h3 {
+  margin: 0 0 20px;
+
+  color: #123c69;
+
+  font-size: 22px;
+}
+
+.package-detail-card ul {
+  padding: 0;
+
+  margin: 0;
+
+  list-style: none;
+}
+
+.package-detail-card li {
+  padding: 12px 0;
+
+  border-bottom: 1px solid #eeeeee;
+
+  color: #555555;
+
+  font-size: 14px;
+}
+
+.package-detail-card li:last-child {
+  border-bottom: none;
+}
+
+
+/* DATA PAKET */
+
+.package-detail-data {
+  padding: 70px 80px;
+
+  background-color: white;
+}
+
+.package-data-card {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+
+  max-width: 1000px;
+
+  margin: 0 auto;
+
+  padding: 30px;
+
+  background-color: #f8fafc;
+
+  border: 1px solid #eeeeee;
+
+  border-radius: 14px;
+}
+
+.package-data-card div {
+  text-align: center;
+}
+
+.package-data-card span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #777777;
+
+  font-size: 12px;
+}
+
+.package-data-card strong {
+  color: #123c69;
+
+  font-size: 18px;
+}
+
+
+/* CATATAN */
+
+.package-detail-note {
+  max-width: 1000px;
+
+  margin: 0 auto;
+
+  padding: 0 80px 80px;
+}
+
+.package-detail-note h3 {
+  margin: 0 0 10px;
+
+  color: #123c69;
+
+  font-size: 20px;
+}
+
+.package-detail-note p {
+  margin: 0;
+
+  color: #777777;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .package-detail-hero {
+    padding: 80px 25px;
+  }
+
+  .package-detail-hero h1 {
+    font-size: 34px;
+  }
+
+  .package-detail-info {
+    padding: 60px 25px;
+
+    background-position: center;
+
+    background-size: cover;
+  }
+
+  .package-detail-content {
+    grid-template-columns: 1fr;
+  }
+
+  .package-detail-data {
+    padding: 50px 25px;
+  }
+
+  .package-data-card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .package-detail-note {
+    padding: 0 25px 60px;
+  }
+}

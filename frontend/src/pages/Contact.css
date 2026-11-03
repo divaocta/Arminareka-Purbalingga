@@ -1,0 +1,467 @@
+
+/* =========================
+   HALAMAN KONTAK
+========================= */
+
+.contact {
+  width: 100%;
+  background-color: #ffffff;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.contact *,
+.contact *::before,
+.contact *::after {
+  box-sizing: border-box;
+}
+
+/* =========================
+   HERO KONTAK
+========================= */
+
+.contact-hero {
+  padding: 100px 24px;
+  background-image:
+    linear-gradient(
+      rgba(10, 45, 80, 0.65),
+      rgba(10, 45, 80, 0.65)
+    ),
+    url('/hero-umroh.jpg');
+
+  background-size: cover;
+  background-position: center bottom;
+  color: #ffffff;
+  text-align: center;
+}
+
+.contact-hero p {
+  margin: 0 0 12px;
+  color: #d6a83d;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.contact-hero h1 {
+  max-width: 800px;
+  margin: 0 auto 20px;
+  color: #ffffff;
+  font-size: 42px;
+  line-height: 1.3;
+}
+
+.contact-hero span {
+  display: block;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #dce6ef;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* =========================
+   INFORMASI KONTAK
+========================= */
+
+.contact-info {
+  width: 100%;
+  padding: 80px 24px;
+  background-color: #ffffff;
+}
+
+.contact-header {
+  max-width: 750px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.contact-header p {
+  margin: 0 0 12px;
+  color: #c99a2e;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.contact-header h2 {
+  margin: 0 0 20px;
+  color: #123c69;
+  font-size: 34px;
+  line-height: 1.3;
+}
+
+.contact-header span {
+  display: block;
+  color: #666666;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* =========================
+   KARTU KONTAK
+========================= */
+
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  min-width: 0;
+  min-height: 190px;
+  padding: 30px 20px;
+  background-color: #f8fafc;
+  border: 1px solid #eeeeee;
+  border-radius: 12px;
+  text-align: center;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(18, 60, 105, 0.08);
+}
+
+/* Ikon kontak */
+
+.contact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background-color: #123c69;
+  color: #ffffff;
+}
+
+.contact-icon svg {
+  display: block;
+  width: 23px;
+  height: 23px;
+}
+
+/* Judul kartu */
+
+.contact-card h3 {
+  margin: 0 0 12px;
+  color: #123c69;
+  font-size: 17px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Nomor dan alamat */
+
+.contact-card p {
+  width: 100%;
+  margin: 0;
+  color: #777777;
+  font-size: 13px;
+  line-height: 1.8;
+  text-align: center;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+.contact-card a {
+  color: inherit;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  transition: color 0.2s ease;
+}
+
+.contact-card a:hover {
+  color: #c99a2e;
+  text-decoration: underline;
+}
+
+/* =========================
+   FORM KONTAK
+========================= */
+
+.contact-form-section {
+  width: 100%;
+  padding: 90px 24px;
+  background-color: #f8fafc;
+}
+
+.contact-form-header {
+  max-width: 750px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.contact-form-header p {
+  margin: 0 0 12px;
+  color: #c99a2e;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.contact-form-header h2 {
+  margin: 0 0 20px;
+  color: #123c69;
+  font-size: 34px;
+  line-height: 1.3;
+}
+
+.contact-form-header span {
+  display: block;
+  color: #666666;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* Formulir */
+
+.contact-form {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 35px;
+  background-color: #ffffff;
+  border: 1px solid #eeeeee;
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(18, 60, 105, 0.04);
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #123c69;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  display: block;
+  width: 100%;
+  padding: 13px 15px;
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #555555;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #123c69;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #999999;
+}
+
+/* Tombol kirim */
+
+.contact-submit {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 6px;
+  background-color: #c99a2e;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.contact-submit:hover {
+  background-color: #b48824;
+}
+
+/* =========================
+   LOKASI
+========================= */
+
+.contact-location {
+  width: 100%;
+  padding: 80px 24px;
+  background-color: #ffffff;
+}
+
+.contact-location-header {
+  max-width: 750px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.contact-location-header p {
+  margin: 0 0 12px;
+  color: #c99a2e;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.contact-location-header h2 {
+  margin: 0 0 20px;
+  color: #123c69;
+  font-size: 34px;
+  line-height: 1.3;
+}
+
+.contact-location-header span {
+  display: block;
+  color: #666666;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* Peta Google Maps */
+
+.contact-map {
+  width: 100%;
+  max-width: 1050px;
+  height: 400px;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+  background-color: #f8fafc;
+  border: 1px solid #eeeeee;
+  border-radius: 14px;
+}
+
+.contact-map iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* =========================
+   RESPONSIVE TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .contact-cards {
+    gap: 16px;
+  }
+
+  .contact-card {
+    padding: 25px 14px;
+  }
+
+  .contact-card h3 {
+    font-size: 16px;
+  }
+
+  .contact-card p {
+    font-size: 12px;
+  }
+}
+
+/* =========================
+   RESPONSIVE HP
+========================= */
+
+@media (max-width: 768px) {
+  .contact-hero {
+    padding: 75px 24px;
+  }
+
+  .contact-hero h1 {
+    font-size: 32px;
+  }
+
+  .contact-info,
+  .contact-location {
+    padding: 60px 20px;
+  }
+
+  .contact-header h2,
+  .contact-form-header h2,
+  .contact-location-header h2 {
+    font-size: 28px;
+  }
+
+  .contact-cards {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    max-width: 420px;
+  }
+
+  .contact-card {
+    min-height: 175px;
+    padding: 28px 24px;
+  }
+
+  .contact-card p {
+    font-size: 13px;
+  }
+
+  .contact-form-section {
+    padding: 65px 20px;
+  }
+
+  .contact-form {
+    padding: 25px 20px;
+  }
+
+  .contact-map {
+    height: 320px;
+  }
+}
+
+/* =========================
+   RESPONSIVE HP KECIL
+========================= */
+
+@media (max-width: 400px) {
+  .contact-hero h1 {
+    font-size: 27px;
+  }
+
+  .contact-header h2,
+  .contact-form-header h2,
+  .contact-location-header h2 {
+    font-size: 25px;
+  }
+
+  .contact-form {
+    padding: 22px 16px;
+  }
+
+  .contact-map {
+    height: 280px;
+  }
+}

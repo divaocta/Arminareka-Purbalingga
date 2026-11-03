@@ -1,0 +1,282 @@
+
+.chatbot-container {
+  position: fixed;
+  right: 22px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9999;
+  font-family: inherit;
+}
+
+/* Tombol telepon */
+.chatbot-toggle {
+  width: 68px;
+  height: 68px;
+  border: none;
+  border-radius: 50%;
+  background: #123c69;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(18, 60, 105, 0.25);
+  transition: all 0.25s ease;
+}
+
+.chatbot-toggle:hover {
+  background: #c99a2e;
+  transform: scale(1.07);
+}
+
+/* Jendela chatbot */
+.chatbot-window {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 390px;
+  height: 550px;
+  max-height: 85vh;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 12px 40px rgba(15, 35, 60, 0.2);
+  border: 1px solid #e8edf3;
+}
+
+/* Header */
+.chatbot-header {
+  background: #123c69;
+  color: white;
+  padding: 19px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.chatbot-header-info {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-width: 0;
+}
+
+.chatbot-logo {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.chatbot-logo img {
+  width: 85%;
+  height: 85%;
+  object-fit: contain;
+}
+
+.chatbot-header-text h3 {
+  font-size: 17px;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.chatbot-header-text p {
+  font-size: 13px;
+  margin: 0;
+  color: #e4ebf3;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.chatbot-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #69c58a;
+}
+
+.chatbot-close {
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 0 3px;
+  line-height: 1;
+  transition: color 0.2s;
+}
+
+.chatbot-close:hover {
+  color: #e5bd5b;
+}
+
+/* Area percakapan */
+.chatbot-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 22px 20px;
+  background: #f7f9fc;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.chatbot-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chatbot-messages::-webkit-scrollbar-thumb {
+  background: #cbd3df;
+  border-radius: 10px;
+}
+
+/* Bubble pesan */
+.chatbot-message {
+  max-width: 88%;
+  padding: 13px 16px;
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.chatbot-message.bot {
+  align-self: flex-start;
+  background: white;
+  color: #263b52;
+  border: 1px solid #e5eaf0;
+  border-radius: 4px 16px 16px 16px;
+}
+
+.chatbot-message.user {
+  align-self: flex-end;
+  background: #123c69;
+  color: white;
+  border-radius: 16px 4px 16px 16px;
+}
+
+/* Pertanyaan cepat */
+.chatbot-quick-questions {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-top: 5px;
+}
+
+.chatbot-quick-questions p {
+  color: #758397;
+  font-size: 13px;
+  margin: 0 0 4px;
+}
+
+.chatbot-quick-questions button {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #e0e6ee;
+  border-radius: 10px;
+  background: white;
+  color: #123c69;
+  font-size: 13px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.chatbot-quick-questions button:hover {
+  border-color: #c99a2e;
+  background: #fffdf7;
+}
+
+.quick-arrow {
+  font-size: 22px;
+  color: #c99a2e;
+}
+
+/* Kolom input */
+.chatbot-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  background: white;
+  border-top: 1px solid #edf0f4;
+  flex-shrink: 0;
+}
+
+.chatbot-input input {
+  flex: 1;
+  min-width: 0;
+  padding: 13px 15px;
+  border: 1px solid #dfe5ed;
+  border-radius: 30px;
+  outline: none;
+  font-size: 14px;
+  color: #263b52;
+}
+
+.chatbot-input input:focus {
+  border-color: #123c69;
+}
+
+.chatbot-input button {
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  border: none;
+  border-radius: 50%;
+  background: #c99a2e;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.chatbot-input button:hover {
+  background: #ad8120;
+}
+
+/* Tampilan HP */
+@media (max-width: 480px) {
+  .chatbot-container {
+    right: 14px;
+  }
+
+  .chatbot-toggle {
+    width: 58px;
+    height: 58px;
+  }
+
+  .chatbot-window {
+    position: fixed;
+    top: 50%;
+    right: 12px;
+    width: calc(100vw - 24px);
+    height: min(600px, 85vh);
+    max-height: 85vh;
+    transform: translateY(-50%);
+  }
+
+  .chatbot-header {
+    padding: 15px;
+  }
+
+  .chatbot-logo {
+    width: 48px;
+    height: 48px;
+  }
+}
