@@ -1,5 +1,5 @@
-// Vite proxy akan meneruskan semua /api ke http://127.0.0.1:8000
-const API_BASE = '/api'
+// Base URL: jika di Vercel/Production akan memakai Railway backend, di lokal dev bisa tetap menggunakan proxy
+const API_BASE = import.meta.env.VITE_API_URL || (import.meta.env.DEV ? '/api' : 'https://arminareka-purbalingga.up.railway.app/api')
 
 // Helper fetch dengan error handling
 async function apiFetch(endpoint, options = {}) {
