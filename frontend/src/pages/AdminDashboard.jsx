@@ -331,30 +331,35 @@ function AdminDashboard() {
     const rawUrl = doc?.url || doc?.file_url
     if (!rawUrl) return null
 
-    // Jika URL mengandung /storage/ (baik dari http://localhost/storage/ atau http://127.0.0.1:8000/storage/),
-    // ubah menjadi path relatif /storage/... agar selalu melewati proxy Vite atau origin saat ini
+    // Tentukan origin backend (di Vercel / production arahkan ke Railway)
+    const backendOrigin = (
+      import.meta.env.VITE_API_URL ||
+      (import.meta.env.DEV ? '' : 'https://arminareka-purbalingga.up.railway.app/api')
+    ).replace(/\/api\/?$/, '')
+
+    // Jika sudah merupakan URL online publik (bukan localhost), gunakan langsung
+    if (
+      (rawUrl.startsWith('http://') || rawUrl.startsWith('https://')) &&
+      !rawUrl.includes('localhost') &&
+      !rawUrl.includes('127.0.0.1')
+    ) {
+      return rawUrl
+    }
+
+    // Ekstrak bagian /storage/...
     const storageIndex = rawUrl.indexOf('/storage/')
     if (storageIndex !== -1) {
-      return rawUrl.substring(storageIndex)
+      const relativeStorage = rawUrl.substring(storageIndex)
+      return backendOrigin ? `${backendOrigin}${relativeStorage}` : relativeStorage
     }
 
     if (rawUrl.startsWith('registrations/')) {
-      return `/storage/${rawUrl}`
+      const relativeStorage = `/storage/${rawUrl}`
+      return backendOrigin ? `${backendOrigin}${relativeStorage}` : relativeStorage
     }
 
-    if (rawUrl.startsWith('http://') || rawUrl.startsWith('https://')) {
-      return rawUrl
-    }
-
-    if (rawUrl.startsWith('/storage/')) {
-      return rawUrl
-    }
-
-    if (rawUrl.startsWith('storage/')) {
-      return `/${rawUrl}`
-    }
-
-    return rawUrl.startsWith('/') ? `/storage${rawUrl}` : `/storage/${rawUrl}`
+    const relativeStorage = rawUrl.startsWith('/') ? `/storage${rawUrl}` : `/storage/${rawUrl}`
+    return backendOrigin ? `${backendOrigin}${relativeStorage}` : relativeStorage
   }
 
   function renderStatus(status) {
